@@ -1,0 +1,13 @@
+version: "2"
+services:
+  openssh-server:
+    build: 
+        context: .
+        dockerfile: Dockerfile
+    container_name: openssh-server
+    hostname: openssh-server #optional
+    environment:
+      - DOMAIN=localtunnel.local
+    ports:
+      - "2222:22"
+    restart: unless-stopped
