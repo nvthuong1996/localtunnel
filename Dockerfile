@@ -20,8 +20,8 @@ RUN apt-get clean && \
 RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt bionic main restricted universe multiverse\n" > /etc/apt/sources.list
 RUN apt-get update
 COPY ./sshkey/authorized_keys /root/.ssh/
-COPY ./sshkey/id_rsa /root/sshkey
-COPY ./serveo /root
+COPY ./sshkey/id_rsa /sshkey/id_rsa
+COPY ./serveo /
 COPY ./start.sh /
 RUN chmod +x serveo
 RUN chmod +x start.sh

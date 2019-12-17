@@ -9,5 +9,6 @@ services:
     environment:
       - DOMAIN=localtunnel.local
     ports:
-      - "2222:22"
+      - "2222:2222"
+      - "80:80"
     restart: unless-stopped
